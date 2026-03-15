@@ -1,0 +1,17 @@
+{
+  "model": "Lightweight U-Net + SE (Patch-Based, IDRiD Real Data)",
+  "dataset": "IDRiD Segmentation \u2014 54 train + 27 test images",
+  "patch_size": 256,
+  "patches_per_image": 10,
+  "epochs_trained": 80,
+  "best_val_dice": 0.1138,
+  "test_metrics": {
+    "dice": 0.1149,
+    "iou": 0.0626,
+    "precision": 0.0654,
+    "recall": 0.5921,
+    "f1": 0.1149,
+    "accuracy": 0.7897
+  },
+  "model_saved": "final_results\\best_model.pth"
+}

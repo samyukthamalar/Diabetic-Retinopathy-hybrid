@@ -1,0 +1,46 @@
+# Core Deep Learning Frameworks
+tensorflow>=2.13.0
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Image Processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+scikit-image>=0.21.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+
+# Data Augmentation
+albumentations>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Web UI
+gradio>=4.0.0
+
+# Utilities
+tqdm>=4.66.0
+pyyaml>=6.0
+
+# Optional: For Jupyter notebooks
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Optional: For model interpretability
+grad-cam>=1.4.0
+
+# Optional: For hyperparameter tuning
+optuna>=3.0.0
+
+# Optional: For experiment tracking
+tensorboard>=2.13.0
+wandb>=0.15.0
