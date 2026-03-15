@@ -14,17 +14,6 @@ venv/
 env/
 .venv/
 
-# Data — large image dataset (re-generate with prepare.py)
-data/train/
-data/val/
-data/test/
-
-# Model weights — large binary (download separately)
-models/best_model.pth
-
-# Prediction outputs
-outputs/
-
 # OS
 .DS_Store
 Thumbs.db

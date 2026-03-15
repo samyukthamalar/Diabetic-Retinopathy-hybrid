@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-15T23:03:59.872552",
+  "architecture": "Hybrid U-Net + Squeeze-Excitation (LightUNet, IDRiD)",
+  "pipeline": [
+    "Stage 1: Input \u2014 Fundus (IDRiD) + OCT",
+    "Stage 2: Preprocessing \u2014 Resize, Denoise, Normalize",
+    "Stage 3: CNN Feature Extraction (encoder path)",
+    "Stage 4: Hybrid Model \u2014 U-Net Segmentation + Severity Classifier",
+    "Stage 5: Output \u2014 Lesion Segmentation + DR Severity + Diagnosis"
+  ],
+  "model_metrics": {
+    "dice": 0.1149,
+    "iou": 0.0626,
+    "precision": 0.0654,
+    "recall": 0.5921,
+    "f1": 0.1149,
+    "accuracy": 0.7897
+  },
+  "fundus": {
+    "diagnosis": "Moderate NPDR",
+    "severity": "MODERATE",
+    "description": "Moderate NPDR \u2014 Hemorrhages and exudates detected.",
+    "lesion_types": [
+      "Microaneurysms (16)",
+      "Hemorrhages (9)",
+      "Exudates (2)"
+    ],
+    "lesion_burden_pct": 9.671,
+    "lesion_count": 27,
+    "confidence_pct": 59.55
+  },
+  "oct": {
+    "diagnosis": "Moderate NPDR",
+    "severity": "MODERATE",
+    "description": "Moderate NPDR \u2014 Hemorrhages and exudates detected.",
+    "fluid_area_pct": 0.0,
+    "drusen_area_pct": 0.273,
+    "confidence_pct": 72.7
+  }
+}
