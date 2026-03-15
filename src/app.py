@@ -280,7 +280,7 @@ with gr.Blocks(theme=THEME, title="DR Lesion Segmentation") as demo:
             with gr.Row():
                 with gr.Column(scale=1):
                     m_fundus = gr.Image(type="pil", label="Fundus Image (IDRiD)", height=260)
-                    m_oct    = gr.Image(type="pil", label="OCT Image"",    height=240)
+                    m_oct    = gr.Image(type="pil", label="OCT Image",     height=240)
                     m_btn     = gr.Button("Run Multimodal Analysis", variant="primary")
                 with gr.Column(scale=2):
                     with gr.Row():
