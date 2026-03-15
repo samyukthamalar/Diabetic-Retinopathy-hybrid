@@ -280,21 +280,17 @@ with gr.Blocks(theme=THEME, title="DR Lesion Segmentation") as demo:
             with gr.Row():
                 with gr.Column(scale=1):
                     m_fundus = gr.Image(type="pil", label="Fundus Image (IDRiD)", height=260)
-                    m_oct    = gr.Image(type="pil", label="OCT Image",     height=240)
-                    m_btn     = gr.Button("Run Multimodal Analysis", variant="primary")
-                with gr.Column(scale=2):
-                    with gr.Row():
-                        m_overlay  = gr.Image(label="Fundus Lesion Overlay", height=200)
-                        m_heatmap  = gr.Image(label="Segmentation Map",      height=200)
-                    with gr.Row():
-                        m_oct_map  = gr.Image(label="OCT Lesion Map",        height=200)
-                        m_prep     = gr.Image(label="Preprocessed Fundus",   height=200)
-                    m_result   = gr.Markdown(label="Diagnosis")
+                    m_oct    = gr.Image(type="pil", label="OCT Image",            height=260)
+                    m_btn    = gr.Button("Run Multimodal Analysis", variant="primary", size="lg")
+            with gr.Row():
+                m_result_img = gr.Image(label="Unified Result Card", height=520)
+            with gr.Row():
+                m_result = gr.Markdown(label="Unified Diagnosis")
 
             m_btn.click(
                 fn=predict_both,
                 inputs=[m_fundus, m_oct],
-                outputs=[m_overlay, m_heatmap, m_oct_map, m_prep, m_result],
+                outputs=[m_result_img, m_result],
             )
 
     gr.Markdown(
@@ -308,4 +304,4 @@ with gr.Blocks(theme=THEME, title="DR Lesion Segmentation") as demo:
 
 
 if __name__ == '__main__':
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+    demo.launch(server_name="127.0.0.1", server_port=7860, share=False)
